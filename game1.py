@@ -1,6 +1,6 @@
 from pygame import *
 
-
+#hxdfghjkl;khnjhvcgyuhkjbnmbghukj
 
 window = display.set_mode((700, 500))
 display.set_caption("First application")

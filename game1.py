@@ -28,13 +28,24 @@ while run:
         if e.type == KEYDOWN:
             if e.key==K_LEFT:
                 print('left')
-                
+                x=x-10
+                window.blit(merlin,(x,y))
+                display.upde()
             elif e.key==K_RIGHT:
                 print('right')
+                x=x+10
+                window.blit(merlin,(x,y))
+                display.upde()
             elif e.key==K_UP:
                 print('up')
+                y=y-10
+                window.blit(merlin,(x,y))
+                display.upde()
             elif e.key==K_DOWN:
-                print('down')    
+                print('down')
+                y=y+10
+                window.blit(merlin,(x,y))
+                display.upde()    
         if e.type == QUIT:
             quit()
             run=False

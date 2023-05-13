@@ -1,4 +1,3 @@
-
 from pygame import *
 import random
 #main player class—Characters
@@ -51,9 +50,9 @@ class Win(Wall):
 
 def change_background():
     backgrounds = [
-        'assets/backgrounds/city_1.png',
-        'assets/backgrounds/city_2.png',
-        'assets/backgrounds/city_3.png',
+        'assets/heroes/bogdan.jpg',
+        'assets/heroes/bogdan.jpg',
+        'assets/heroes/bogdan.jpg',
     ]
     selected_background = random.choice(backgrounds)
     background_image = image.load(selected_background)
@@ -61,10 +60,11 @@ def change_background():
     return background_image
 
 def change_background_win():
-    selected_background = "assets/backgrounds/winner_1.jpg"
+    selected_background = "assets/heroes/bogdan.jpg"
     background_image = image.load(selected_background)
     background_image = transform.scale(background_image, (800, 600))
     return background_image
+
 
 
 init()
@@ -75,9 +75,9 @@ running = True
 levels = list()
 
 characters = sprite.Group()
-character =Character('assets/level/hero.png',100,100)
+character =Character('assets/heroes/bogdan.jpg',100,100)
 characters.add(character)
-win = Win("assets/level/trophy-1.png",400,400)
+win = Win("assets/heroes/bogdan.jpg",400,400)
 characters.add(win)
 
 for i in range(3):
@@ -87,25 +87,25 @@ for i in range(3):
 
 # wall1 = Wall('assets/backgrounds/cave.png',500,500)
 walls1 = [
-    Wall('assets/backgrounds/cave.png', 300, 0),
-    Wall('assets/backgrounds/cave.png', 300, 64),
-    Wall('assets/backgrounds/cave.png', 300, 128),
-    Wall('assets/backgrounds/cave.png', 300, 192),
-    Wall('assets/backgrounds/cave.png', 300, 256),
-    Wall('assets/backgrounds/cave.png', 300, 320)
+    Wall('assets/heroes/bogdan.jpg', 300, 0),
+    Wall('assets/heroes/bogdan.jpg', 300, 64),
+    Wall('assets/heroes/bogdan.jpg', 300, 128),
+    Wall('assets/heroes/bogdan.jpg', 300, 192),
+    Wall('assets/heroes/bogdan.jpg', 300, 256),
+    Wall('assets/heroes/bogdan.jpg', 300, 320)
 ]
 levels[0].add(walls1)
 
 
 walls2 = list()
 for i in range(5):
-    walls2.append( Wall('assets/backgrounds/cave.png', 64+i*64, 320))
-    walls2.append( Wall('assets/backgrounds/cave.png', 64+i*64, 320-i*64))
+    walls2.append( Wall('assets/heroes/bogdan.jpg', 64+i*64, 320))
+    walls2.append( Wall('assets/heroes/bogdan.jpg', 64+i*64, 320-i*64))
 
 walls3 = list()
 for i in range(5):
-    walls2.append( Wall('assets/backgrounds/cave.png', 64+i*2*64, 320))
-    walls2.append( Wall('assets/backgrounds/cave.png', 320-i*64,384))
+    walls2.append( Wall('assets/heroes/bogdan.jpg', 64+i*2*64, 320))
+    walls2.append( Wall('assets/heroes/bogdan.jpg', 320-i*64,384))
 
 
 
